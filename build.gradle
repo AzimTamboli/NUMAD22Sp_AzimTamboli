@@ -1,4 +1,13 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    var = 'Azim@123'
+    var = var
+    var1 = 'My Key'
+    var2 = 'My Key'
+    var2 = 'My Key'
+    var = 'Azim@123'
+    var3 = var2
+    var4 = var2
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
         google()
