@@ -6,4 +6,6 @@
     <string name="c">C</string>
     <string name="d">D</string>
     <string name="f">f</string>
+    <string name="button">newPage</string>
+    <string name="e">E</string>
 </resources>

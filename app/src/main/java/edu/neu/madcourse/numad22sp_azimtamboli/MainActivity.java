@@ -24,9 +24,18 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                displayAboutMe();
+            }
+        });
+
+        button = (Button) findViewById(R.id.nextPage);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 openActivity2();
             }
         });
+
     }
 
     private void openActivity2() {
@@ -34,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void displayAboutMe(View view) {
+    public void displayAboutMe() {
 
         Context context = getApplicationContext();
         CharSequence text = "Name: Azim Tamboli\nEmail: tamboli.a@northeastern.edu";
