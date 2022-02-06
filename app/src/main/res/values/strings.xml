@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">NUMAD22Sp_AzimTamboli</string>
     <string name="button_string">About me</string>
+    <string name="b">B</string>
+    <string name="a">A</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="f">f</string>
 </resources>
