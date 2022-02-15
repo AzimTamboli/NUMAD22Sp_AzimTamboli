@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD22Sp_AzimTamboli">
         <activity
+            android:name=".AboutMeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ItemActivity"
+            android:exported="false" />
+        <activity
             android:name=".NewActivity"
             android:exported="false" />
         <activity

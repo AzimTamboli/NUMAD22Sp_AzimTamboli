@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="400dp"
+        android:layout_height="86dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="70dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:layout_below="@+id/name"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="19dp"
+            android:text="@string/url"
+
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

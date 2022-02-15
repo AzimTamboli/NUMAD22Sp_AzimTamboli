@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                displayAboutMe();
+                //displayAboutMe();
+                aboutMeNewActivity();
             }
         });
 
@@ -36,10 +37,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button = (Button) findViewById(R.id.link_collector);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openItemActivity();
+            }
+        });
+
+    }
+
+    private void openItemActivity() {
+        Intent intent = new Intent(this, ItemActivity.class);
+        startActivity(intent);
     }
 
     private void openActivity2() {
         Intent intent = new Intent(this, NewActivity.class);
+        startActivity(intent);
+    }
+
+    private void aboutMeNewActivity() {
+        Intent intent = new Intent(this, AboutMeActivity.class);
         startActivity(intent);
     }
 
