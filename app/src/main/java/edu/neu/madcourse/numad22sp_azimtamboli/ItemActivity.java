@@ -49,10 +49,6 @@ public class ItemActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                int pos = 0;
-                addItem(pos);
-                */
                 showCustomDialog();
             }
         });
@@ -77,13 +73,18 @@ public class ItemActivity extends AppCompatActivity {
 
     }
 
+    /*
+        I have borrowed this code from professors sample code which I found extremely helpful.
+         */
     private void init(Bundle savedInstanceState) {
 
         initialItemData(savedInstanceState);
         createRecyclerView();
     }
 
-
+    /*
+        I have borrowed this code from professors sample code which I found extremely helpful.
+         */
     private void initialItemData(Bundle savedInstanceState) {
 
         // Not the first time to open this Activity
@@ -123,7 +124,9 @@ public class ItemActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
 
     }
-
+    /*
+        I have borrowed this code from professors sample code which I found extremely helpful.
+         */
     private void createRecyclerView() {
 
         rLayoutManger = new LinearLayoutManager(this);
@@ -139,7 +142,7 @@ public class ItemActivity extends AppCompatActivity {
                 itemList.get(position).onItemClick(position);
 
                 rviewAdapter.notifyItemChanged(position);
-                Toast.makeText(ItemActivity.this, "Item Clicked-" + itemList.get(position).getItemUrl().substring(6), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ItemActivity.this, "Link Clicked-", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(itemList.get(position).getItemUrl().substring(6)));
                 startActivity(intent);
@@ -155,16 +158,19 @@ public class ItemActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * I have borrowed small piece of code to create custom dialouge
+     * https://github.com/Pro-Grammerr/Custom-Dialog/blob/master/app/src/main/java/com/awesomeness/customdialog/MainActivity.java
+     */
     private void showCustomDialog() {
         final Dialog dialog = new Dialog(ItemActivity.this);
-        //We have added a title in the custom layout. So let's disable the default title.
+
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //The user will be able to cancel the dialog bu clicking anywhere outside the dialog.
+
         dialog.setCancelable(true);
-        //Mention the name of the layout of your custom dialog.
+
         dialog.setContentView(R.layout.dialog);
 
-        //Initializing the views of the dialog.
         final EditText nameEt = dialog.findViewById(R.id.name_d);
         final EditText urlEt = dialog.findViewById(R.id.url_d);
         Button submitButton = dialog.findViewById(R.id.submit);
@@ -175,11 +181,7 @@ public class ItemActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = nameEt.getText().toString();
                 String url = urlEt.getText().toString();
-                /*
-                Boolean hasAccepted = termsCb.isChecked();
-                Boolean hasAccepted = false;
-                populateInfoTv(name,age,hasAccepted);
-                */
+
                 addItem(name, url);
 
                 dialog.dismiss();
@@ -194,8 +196,6 @@ public class ItemActivity extends AppCompatActivity {
         if (URLUtil.isValidUrl(url) && (name != null || name.length()!=0)) {
             itemList.add(0, new ItemCard("Name : " + name,"Url : " + url));
 
-            //itemList.add(position, new ItemCard("Item id: " + Math.abs(new Random().nextInt(100000)), "No Logo item"));
-            //Toast.makeText(ItemActivity.this, "Add an item", Toast.LENGTH_SHORT).show();
             Snackbar.make(findViewById(R.id.recyclerView), "Added link successfully",
                     Snackbar.LENGTH_SHORT)
                     .show();

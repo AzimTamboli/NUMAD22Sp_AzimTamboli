@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.neu.madcourse.numad22sp_azimtamboli">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_at_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD22Sp_AzimTamboli">
+
+        <activity
+            android:name=".LocatorActivity"
+            android:exported="false">
+
+        </activity>
+
+
         <activity
             android:name=".AboutMeActivity"
             android:exported="false" />
