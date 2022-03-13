@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,14 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_at_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUMAD22Sp_AzimTamboli">
-
+        <activity
+            android:name=".CurrencyConverter"
+            android:exported="false" />
         <activity
             android:name=".LocatorActivity"
-            android:exported="false">
-
-        </activity>
-
-
+            android:exported="false" />
         <activity
             android:name=".AboutMeActivity"
             android:exported="false" />

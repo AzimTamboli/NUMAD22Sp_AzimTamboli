@@ -62,8 +62,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button = findViewById(R.id.webService);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openWebService();
+            }
+        });
 
 
+    }
+
+    private void openWebService() {
+        Intent intent = new Intent(this, CurrencyConverter.class);
+        startActivity(intent);
     }
 
     private void openLocator() {

@@ -7,14 +7,15 @@
     tools:context=".MainActivity">
 
     <TableLayout
-        android:layout_width="298dp"
-        android:layout_height="139dp"
+        android:layout_width="300dp"
+        android:layout_height="192dp"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
 
         <TableRow
             android:layout_width="105dp"
@@ -37,15 +38,15 @@
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button_string"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:text="@string/button_string" />
 
             <Button
                 android:id="@+id/nextPage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/button"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:text="@string/button" />
 
         </TableRow>
 
@@ -57,8 +58,8 @@
                 android:id="@+id/locator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/locator"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:text="@string/locator" />
 
             <Button
                 android:id="@+id/link_collector"
@@ -66,6 +67,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
                 android:text="@string/link_collector" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/webService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/web_service" />
         </TableRow>
 
     </TableLayout>
